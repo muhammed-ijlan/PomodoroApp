@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PauseOutlinedIcon from '@mui/icons-material/PauseOutlined';
 
 function Pomodoro() {
     const [minute, setMinute] = useState(25)
@@ -25,8 +26,12 @@ function Pomodoro() {
                 setSecond(second - 1)
             }
         }, 10);
-
     }, [minute, second, message])
+
+    const restartHandler = () => {
+        setMinute(25)
+        setSecond(0)
+    }
 
     return (
         <div className='pomodoro'>
@@ -35,7 +40,8 @@ function Pomodoro() {
             </div>
 
             <div className='timer'>{minute < 10 ? "0" + minute : minute}:{second < 10 ? "0" + second : second}</div>
-            <button className='restart-btn'>Restart</button>
+            <button className='restart-btn' onClick={restartHandler}>Restart</button>
+            <PauseOutlinedIcon />
 
         </div>
     )
