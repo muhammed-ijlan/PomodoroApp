@@ -51,3 +51,15 @@
   border: 1px solid rgb(35, 9, 9);
   border-radius: 5px;
 }
+
+@media screen and (max-width: 1024px) {
+  .message {
+    font-size: 50px;
+  }
+  .timer {
+    font-size: 100px;
+  }
+  .pomodoro {
+    height: 100vh;
+  }
+}

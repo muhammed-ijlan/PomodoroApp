@@ -31,7 +31,7 @@ function Pomodoro() {
             } else {
                 return;
             }
-        }, 1000);
+        }, 10);
         return () => clearInterval(intarval)
     }, [minute, second, message, paused])
 
