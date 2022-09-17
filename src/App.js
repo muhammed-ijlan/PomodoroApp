@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="bg-indigo-800 h-screen" >
    {!userData && <Login />}
-      {userData &&  <Info />}
+      {userData &&  <Info user={userData}/>}
      {userData && <Pomodoro />}
     </div>
   );
