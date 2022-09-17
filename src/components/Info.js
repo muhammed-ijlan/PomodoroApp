@@ -24,7 +24,7 @@ function Info({user}) {
     <button onClick={logoutHandler} class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent">LogOut</button>
     </div>
   </div>
-  <p className="text-center text-6xl font-medium text-white py-3">Hello {user.username.split(" ")[0]} !!</p>
+  <p className="text-center text-6xl font-medium text-white py-3 font-mono">Hello {user.username.split(" ")[0]} !!</p>
  </div>
   )
 }
