@@ -1,11 +1,20 @@
 
-import './App.css';
+import { useEffect, useState } from 'react';
+import Info from './components/Info';
+import Login from './components/Login';
 import Pomodoro from './components/Pomodoro';
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const {userData} = useSelector((state)=>state.user)
+  console.log(userData);
+
   return (
-    <div className="App">
-      <Pomodoro />
+    <div className="bg-indigo-800 h-screen" >
+   {!userData && <Login />}
+      {userData &&  <Info />}
+     {userData && <Pomodoro />}
     </div>
   );
 }

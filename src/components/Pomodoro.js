@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PauseOutlinedIcon from '@mui/icons-material/PauseOutlined';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
-// import './Pomodoro.css'
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 function Pomodoro() {
     const [minute, setMinute] = useState(25)
@@ -43,22 +43,28 @@ function Pomodoro() {
 
 
     return (
-        <div className=''>
-            <div className='message'>
-                {message && "Break Time!"}
-            </div>
+        <div className='pt-10 text-6xl font-mono antialiased font-medium'>
 
-            <div className='timer'>{minute < 10 ? "0" + minute : minute}:{second < 10 ? "0" + second : second}</div>
-            <button className='restart-btn' onClick={restartHandler}>Reset</button>
+            <div className="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
 
-            <div className='icons'>
-                {
-                    paused ?
-                        <div onClick={() => setPaused(false)}> <PlayArrowRoundedIcon fontSize="large" /></div>
-                        :
-                        <div onClick={() => setPaused(true)}> <PauseOutlinedIcon fontSize="large" /></div>
-                }
+                <div className="flex-shrink-0 flex flex-col ">
+                    <button style={{backgroundImage:""}} className='my-4 bg-blue-500 hover:bg-blue-700 text-white text-center pb-2 px-4 rounded' onClick={restartHandler}><RestartAltIcon fontSize="large" /></button>
+                    <div className='bg-blue-500 hover:bg-blue-700 text-white text-center px-4 pb-2 rounded'>
+                        {
+                            paused ?
+                                <div onClick={() => setPaused(false)}> <PlayArrowRoundedIcon fontSize="large" /></div>
+                                :
+                                <div onClick={() => setPaused(true)}> <PauseOutlinedIcon fontSize="large" /></div>
+                        }
 
+                    </div>
+                </div>
+                <div>
+                    <div className=' text-center text-5xl text-black'>
+                        {message && "Break Time!"}
+                    </div>
+                    <div className='text-9xl text-black '>{minute < 10 ? "0" + minute : minute}:{second < 10 ? "0" + second : second}</div>
+                </div>
             </div>
         </div>
     )
