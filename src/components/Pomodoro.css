@@ -1,0 +1,61 @@
+.pomodoro {
+  height: 100vh;
+  background-color: rgb(0, 16, 46);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.message {
+  font-size: 100px;
+}
+.timer {
+  font-size: 200px;
+}
+.restart-btn {
+  font-size: 1.2rem;
+  border: none;
+  background-color: rgb(113, 10, 10);
+  width: 200px;
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid rgb(35, 9, 9);
+  border-radius: 20px;
+}
+.icons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.icons div {
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  text-align: center;
+  display: flex;
+  width: 100px;
+
+  border: none;
+  background-color: rgb(113, 10, 10);
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid rgb(35, 9, 9);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .message {
+    font-size: 50px;
+  }
+  .timer {
+    font-size: 100px;
+  }
+  .pomodoro {
+    height: 100vh;
+  }
+}

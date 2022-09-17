@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import PauseOutlinedIcon from '@mui/icons-material/PauseOutlined';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
+// import './Pomodoro.css'
 
 function Pomodoro() {
     const [minute, setMinute] = useState(25)
     const [second, setSecond] = useState(0)
     const [message, setMessage] = useState(false)
     const [paused, setPaused] = useState(false)
+
+    const restartHandler = () => {
+        setMinute(25)
+        setSecond(0)
+    }
 
     useEffect(() => {
         let intarval = setInterval(() => {
@@ -31,19 +37,13 @@ function Pomodoro() {
             } else {
                 return;
             }
-        }, 10);
+        }, 1000);
         return () => clearInterval(intarval)
     }, [minute, second, message, paused])
 
-    const restartHandler = () => {
-        setMinute(25)
-        setSecond(0)
-    }
-
-
 
     return (
-        <div className='pomodoro'>
+        <div className=''>
             <div className='message'>
                 {message && "Break Time!"}
             </div>

@@ -1,6 +1,6 @@
 
 import './App.css';
-import Pomodoro from './Pomodoro';
+import Pomodoro from './components/Pomodoro';
 
 function App() {
   return (
