@@ -1,7 +1,6 @@
 import {useDispatch} from "react-redux"
 import { logout } from "../redux/userSlice"
 
-
 function Info({user}) {
  const dispatch = useDispatch()
 

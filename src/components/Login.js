@@ -1,5 +1,5 @@
 import { signInWithPopup } from 'firebase/auth'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { auth, provider } from "../firebase"
 import { login } from '../redux/userSlice'

@@ -44,9 +44,7 @@ function Pomodoro() {
 
     return (
         <div className='pt-10 text-6xl font-mono antialiased font-medium'>
-
             <div className="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-
                 <div className="flex-shrink-0 flex flex-col ">
                     <button style={{backgroundImage:""}} className='my-4 bg-blue-500 hover:bg-blue-700 text-white text-center pb-2 px-4 rounded' onClick={restartHandler}><RestartAltIcon fontSize="large" /></button>
                     <div className='bg-blue-500 hover:bg-blue-700 text-white text-center px-4 pb-2 rounded'>
@@ -56,7 +54,6 @@ function Pomodoro() {
                                 :
                                 <div onClick={() => setPaused(true)}> <PauseOutlinedIcon fontSize="large" /></div>
                         }
-
                     </div>
                 </div>
                 <div>

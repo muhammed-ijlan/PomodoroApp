@@ -1,5 +1,3 @@
-
-import { useEffect, useState } from 'react';
 import Info from './components/Info';
 import Login from './components/Login';
 import Pomodoro from './components/Pomodoro';
